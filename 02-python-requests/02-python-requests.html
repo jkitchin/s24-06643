@@ -408,14 +408,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;meta&#39;: {&#39;count&#39;: 4,
-  &#39;db_response_time_ms&#39;: 119,
+  &#39;db_response_time_ms&#39;: 28,
   &#39;page&#39;: 1,
   &#39;per_page&#39;: 25,
   &#39;groups_count&#39;: None},
  &#39;results&#39;: [{&#39;id&#39;: &#39;https://openalex.org/I74973139&#39;,
    &#39;ror&#39;: &#39;https://ror.org/05x2bcf33&#39;,
    &#39;display_name&#39;: &#39;Carnegie Mellon University&#39;,
-   &#39;relevance_score&#39;: 219889.64,
+   &#39;relevance_score&#39;: 220215.45,
    &#39;country_code&#39;: &#39;US&#39;,
    &#39;type&#39;: &#39;education&#39;,
    &#39;lineage&#39;: [&#39;https://openalex.org/I74973139&#39;],
@@ -624,7 +624,7 @@ const thebe_selector_output = ".output, .cell_output"
   {&#39;id&#39;: &#39;https://openalex.org/I4210089979&#39;,
    &#39;ror&#39;: &#39;https://ror.org/00az5dt38&#39;,
    &#39;display_name&#39;: &#39;Carnegie Mellon University Qatar&#39;,
-   &#39;relevance_score&#39;: 8820.923,
+   &#39;relevance_score&#39;: 8833.982,
    &#39;country_code&#39;: &#39;QA&#39;,
    &#39;type&#39;: &#39;education&#39;,
    &#39;lineage&#39;: [&#39;https://openalex.org/I4210089979&#39;,
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   {&#39;id&#39;: &#39;https://openalex.org/I4210091826&#39;,
    &#39;ror&#39;: &#39;https://ror.org/00ds41r10&#39;,
    &#39;display_name&#39;: &#39;Carnegie Mellon University Australia&#39;,
-   &#39;relevance_score&#39;: 4234.873,
+   &#39;relevance_score&#39;: 4241.143,
    &#39;country_code&#39;: &#39;AU&#39;,
    &#39;type&#39;: &#39;education&#39;,
    &#39;lineage&#39;: [&#39;https://openalex.org/I4210091826&#39;,
@@ -921,7 +921,7 @@ const thebe_selector_output = ".output, .cell_output"
   {&#39;id&#39;: &#39;https://openalex.org/I4210130200&#39;,
    &#39;ror&#39;: &#39;https://ror.org/02f33m021&#39;,
    &#39;display_name&#39;: &#39;Carnegie Mellon University Africa&#39;,
-   &#39;relevance_score&#39;: 3098.489,
+   &#39;relevance_score&#39;: 3103.0764,
    &#39;country_code&#39;: &#39;RW&#39;,
    &#39;type&#39;: &#39;education&#39;,
    &#39;lineage&#39;: [&#39;https://openalex.org/I4210130200&#39;,
@@ -1099,6 +1099,44 @@ const thebe_selector_output = ".output, .cell_output"
    &#39;works_api_url&#39;: &#39;https://api.openalex.org/works?filter=institutions.id:I4210130200&#39;,
    &#39;updated_date&#39;: &#39;2024-03-09T07:59:20.147823&#39;,
    &#39;created_date&#39;: &#39;2022-02-02&#39;}],
+ &#39;group_by&#39;: []}
+</pre></div>
+</div>
+</div>
+</div>
+<p>A better way to make this request is to separate out the url from the params. Here we specify search and select params.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.openalex.org/institutions&#39;</span><span class="p">,</span>
+                   <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;search&#39;</span><span class="p">:</span> <span class="s1">&#39;carnegie+mellon+university&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;select&#39;</span><span class="p">:</span> <span class="s1">&#39;id,display_name,works_count,cited_by_count&#39;</span><span class="p">})</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;meta&#39;: {&#39;count&#39;: 4,
+  &#39;db_response_time_ms&#39;: 36,
+  &#39;page&#39;: 1,
+  &#39;per_page&#39;: 25,
+  &#39;groups_count&#39;: None},
+ &#39;results&#39;: [{&#39;id&#39;: &#39;https://openalex.org/I74973139&#39;,
+   &#39;display_name&#39;: &#39;Carnegie Mellon University&#39;,
+   &#39;works_count&#39;: 121653,
+   &#39;cited_by_count&#39;: 4962826},
+  {&#39;id&#39;: &#39;https://openalex.org/I4210089979&#39;,
+   &#39;display_name&#39;: &#39;Carnegie Mellon University Qatar&#39;,
+   &#39;works_count&#39;: 695,
+   &#39;cited_by_count&#39;: 9705},
+  {&#39;id&#39;: &#39;https://openalex.org/I4210091826&#39;,
+   &#39;display_name&#39;: &#39;Carnegie Mellon University Australia&#39;,
+   &#39;works_count&#39;: 100,
+   &#39;cited_by_count&#39;: 2188},
+  {&#39;id&#39;: &#39;https://openalex.org/I4210130200&#39;,
+   &#39;display_name&#39;: &#39;Carnegie Mellon University Africa&#39;,
+   &#39;works_count&#39;: 186,
+   &#39;cited_by_count&#39;: 1153}],
  &#39;group_by&#39;: []}
 </pre></div>
 </div>
@@ -1521,26 +1559,27 @@ Carnegie Mellon University Africa                        186      1153
 <div class="tex2jax_ignore mathjax_ignore section" id="back-to-the-author-endpoint">
 <h1>Back to the author endpoint<a class="headerlink" href="#back-to-the-author-endpoint" title="Permalink to this headline">¶</a></h1>
 <p>You can access an author from a URL like this:
-<a class="reference external" href="https://api.openalex.org/authors/https://orcid.org/0000-0003-2625-9232">https://api.openalex.org/authors/https://orcid.org/0000-0003-2625-9232</a>. Let’s look at a few things. We get the name, number of works, and a url to those works. Although the url here says there are 172 works, it does not list them. Instead, it provides you with a url to get to them. Let’s click on this url, and see what is there.</p>
+<a class="reference external" href="https://api.openalex.org/authors/https://orcid.org/0000-0003-2625-9232"></a>. Let’s look at a few things. We get the name, number of works, and a url to those works. Although the url here says there are 172 works, it does not list them. Instead, it provides you with a url to get to them. Let’s click on this url, and see what is there.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.openalex.org/authors/https://orcid.org/0000-0003-2625-9232&#39;</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_count&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_api_url&#39;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_count&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_api_url&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;summary_stats&#39;</span><span class="p">][</span><span class="s1">&#39;h_index&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;John R. Kitchin&#39;,
  156,
- &#39;https://api.openalex.org/works?filter=author.id:A5003442464&#39;)
+ &#39;https://api.openalex.org/works?filter=author.id:A5003442464&#39;,
+ 40)
 </pre></div>
 </div>
 </div>
 </div>
-<p>It is another set of json data.</p>
+<p>The works_api_url is another set of json data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">works</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_api_url&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
@@ -1550,7 +1589,7 @@ Carnegie Mellon University Africa                        186      1153
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;count&#39;: 160,
- &#39;db_response_time_ms&#39;: 40,
+ &#39;db_response_time_ms&#39;: 58,
  &#39;page&#39;: 1,
  &#39;per_page&#39;: 25,
  &#39;groups_count&#39;: None}
@@ -1558,19 +1597,20 @@ Carnegie Mellon University Africa                        186      1153
 </div>
 </div>
 </div>
-<p>This new data has a new feature. There are 172 works, but on this “page” of data, there are only 25 results. We have to consider how to access all the pages to get the rest of the data. Paging is described here <a class="reference external" href="https://docs.openalex.org/how-to-use-the-api/get-lists-of-entities/paging">https://docs.openalex.org/how-to-use-the-api/get-lists-of-entities/paging</a>. The gist is we have to add something to the url to increase the number of results per-page. We can increase it up to 200, and this example only has 172, so we do that.</p>
+<p>This new data has a new feature. There are many works, but on this “page” of data, there are only 25 results. We have to consider how to access all the pages to get the rest of the data. Paging is described here <a class="reference external" href="https://docs.openalex.org/how-to-use-the-api/get-lists-of-entities/paging">https://docs.openalex.org/how-to-use-the-api/get-lists-of-entities/paging</a>. The gist is we have to add something to the url to increase the number of results per-page. We can increase it up to 200, and this example only has less than that, so we do that.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">works</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_api_url&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;?page=1&amp;per-page=</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;works_count&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">works</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_api_url&#39;</span><span class="p">],</span>
+                     <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;per-page&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 <span class="n">works</span><span class="p">[</span><span class="s1">&#39;meta&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;count&#39;: 160,
- &#39;db_response_time_ms&#39;: 67,
+ &#39;db_response_time_ms&#39;: 149,
  &#39;page&#39;: 1,
- &#39;per_page&#39;: 156,
+ &#39;per_page&#39;: 200,
  &#39;groups_count&#39;: None}
 </pre></div>
 </div>
@@ -1584,19 +1624,20 @@ Carnegie Mellon University Africa                        186      1153
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>156
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>160
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">citations</span> <span class="o">=</span> <span class="p">[</span><span class="n">work</span><span class="p">[</span><span class="s1">&#39;cited_by_count&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">work</span> <span class="ow">in</span> <span class="n">works</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">citations</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">work</span><span class="p">[</span><span class="s1">&#39;cited_by_count&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">work</span> <span class="ow">in</span> <span class="n">works</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cite</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">citations</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">cite</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;H-index = </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">3d</span><span class="si">}{</span><span class="n">cite</span><span class="si">:</span><span class="s1">8d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">cite</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;H-index = </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    
 </pre></div>
 </div>
 </div>
@@ -1612,29 +1653,37 @@ Carnegie Mellon University Africa                        186      1153
   9     314
  10     300
  11     271
- 12     185
- 13     215
+ 12     215
+ 13     185
  14     150
  15     129
  16     115
  17     108
  18     102
  19      98
- 20      95
- 21      84
- 22      78
- 23      69
- 24      68
- 25      97
- 26      86
- 27      70
+ 20      97
+ 21      95
+ 22      86
+ 23      84
+ 24      81
+ 25      78
+ 26      70
+ 27      69
  28      68
  29      68
- 30      59
- 31      49
- 32      48
- 33      40
-H-index = 33
+ 30      68
+ 31      61
+ 32      59
+ 33      58
+ 34      54
+ 35      49
+ 36      48
+ 37      46
+ 38      46
+ 39      43
+ 40      41
+ 41      40
+H-index = 41
 </pre></div>
 </div>
 </div>
@@ -1660,10 +1709,10 @@ H-index = 33
     <span class="n">works</span> <span class="o">=</span> <span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;works_api_url&#39;</span><span class="p">]</span> 
                           <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;?page=1&amp;per-page=</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;works_count&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
     
-    <span class="n">citations</span> <span class="o">=</span> <span class="p">[</span><span class="n">work</span><span class="p">[</span><span class="s1">&#39;cited_by_count&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">work</span> <span class="ow">in</span> <span class="n">works</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]]</span>
+    <span class="n">citations</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">work</span><span class="p">[</span><span class="s1">&#39;cited_by_count&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">work</span> <span class="ow">in</span> <span class="n">works</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cite</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">citations</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">cite</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">displayname</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">displayname</span><span class="p">,</span> <span class="n">i</span>
 
 <span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;OpenAlex h-index&#39;</span><span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s1">&#39;orcid&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1696,7 +1745,7 @@ H-index = 33
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>John R. Kitchin: h-index = 33
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>John R. Kitchin: h-index = 41
 </pre></div>
 </div>
 </div>

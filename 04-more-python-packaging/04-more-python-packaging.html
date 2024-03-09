@@ -515,7 +515,7 @@ git status
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Switched to a new branch &#39;main&#39;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) 7830d88] Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) e842d75] Initial readme.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 2 insertions(+)
@@ -731,16 +731,19 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \ done
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
 ?25hBuilding wheels for collected packages: s23pack
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for s23pack (setup.py) ... ?25l-
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \ done
-?25h  Created wheel for s23pack: filename=s23pack-0.0.1-py3-none-any.whl size=3077 sha256=5f0728221dc5c793126b8044773d6063192d880cd167775cba4debdcea052ec3
-  Stored in directory: /tmp/pip-ephem-wheel-cache-vw9k6836/wheels/4c/09/cb/3439830f529887f3f6d21382ab5704213f92852c5b86f328a7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> | done
+?25h  Created wheel for s23pack: filename=s23pack-0.0.1-py3-none-any.whl size=3077 sha256=bf627272526e8c6e55abd2ebb32f0af5c21e42f435b9edc5e9461881d805a83e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-c9aqqig4/wheels/4c/09/cb/3439830f529887f3f6d21382ab5704213f92852c5b86f328a7
 Successfully built s23pack
 </pre></div>
 </div>
@@ -862,6 +865,49 @@ Successfully built s23pack
 Carnegie Mellon University Qatar                         695      9705
 Carnegie Mellon University Australia                     100      2188
 Carnegie Mellon University Africa                        186      1153
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+PATH=/home/jupyter-jkitchin@andrew.cm-11dd7/.local/bin oa carnegie mellon
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: line 1: oa: command not found
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CalledProcessError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_cell_magic</span><span class="p">(</span><span class="s1">&#39;bash&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH=/home/jupyter-jkitchin@andrew.cm-11dd7/.local/bin oa carnegie mellon</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_cell_magic</span><span class="nt">(self, magic_name, line, cell)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2476</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2477</span>     <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">magic_arg_s</span><span class="p">,</span> <span class="n">cell</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
+<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decodator @output_can_be_silenced</span>
+<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/magics/script.py:153,</span> in <span class="ni">ScriptMagics._make_script_magic.&lt;locals&gt;.named_script_magic</span><span class="nt">(line, cell)</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="n">line</span> <span class="o">=</span> <span class="n">script</span>
+<span class="ne">--&gt; </span><span class="mi">153</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shebang</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">cell</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/magics/script.py:305,</span> in <span class="ni">ScriptMagics.shebang</span><span class="nt">(self, line, cell)</span>
+<span class="g g-Whitespace">    </span><span class="mi">300</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">raise_error</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">301</span>     <span class="c1"># If we get here and p.returncode is still None, we must have</span>
+<span class="g g-Whitespace">    </span><span class="mi">302</span>     <span class="c1"># killed it but not yet seen its return code. We don&#39;t wait for it,</span>
+<span class="g g-Whitespace">    </span><span class="mi">303</span>     <span class="c1"># in case it&#39;s stuck in uninterruptible sleep. -9 = SIGKILL</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="n">rc</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">9</span>
+<span class="ne">--&gt; </span><span class="mi">305</span>     <span class="k">raise</span> <span class="n">CalledProcessError</span><span class="p">(</span><span class="n">rc</span><span class="p">,</span> <span class="n">cell</span><span class="p">)</span>
+
+<span class="ne">CalledProcessError</span>: Command &#39;b&#39;PATH=/home/jupyter-jkitchin@andrew.cm-11dd7/.local/bin oa carnegie mellon\n&#39;&#39; returned non-zero exit status 127.
 </pre></div>
 </div>
 </div>
@@ -1071,7 +1117,7 @@ git status
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hint: &quot;git config advice.addIgnoredFile false&quot;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 7a45158] add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main d5aa34a] add ignore files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 4 insertions(+)
@@ -1119,7 +1165,7 @@ git commit -m &quot;First set of files&quot;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 8779f1f] First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 808e657] First set of files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 5 files changed, 49 insertions(+)
@@ -1158,13 +1204,13 @@ git log --graph --oneline
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nothing to commit, working tree clean
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 8779f1f First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 808e657 First set of files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 7a45158 add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* d5aa34a add ignore files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 7830d88 Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* e842d75 Initial readme.
 </pre></div>
 </div>
 </div>
@@ -1287,7 +1333,10 @@ git status
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing /home/runner/work/sse-s24/sse-s24/sse/04-more-python-packaging/src
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l- done
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
 ?25hBuilding wheels for collected packages: s23pack
 </pre></div>
 </div>
@@ -1295,13 +1344,15 @@ git status
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for s23pack: filename=s23pack-0.0.1-py3-none-any.whl size=3096 sha256=4bf00ee2a93d9d5d4934cb7f32b2f57e0d1bcc5f74be0862351cac1f141331a0
-  Stored in directory: /tmp/pip-ephem-wheel-cache-qltj0r8k/wheels/4c/09/cb/3439830f529887f3f6d21382ab5704213f92852c5b86f328a7
+?25h  Created wheel for s23pack: filename=s23pack-0.0.1-py3-none-any.whl size=3096 sha256=f26db053d141d7291a422d879df4e056fd644ee66cc2f85d7065673fcde061b6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-h8qp4pmb/wheels/4c/09/cb/3439830f529887f3f6d21382ab5704213f92852c5b86f328a7
 Successfully built s23pack
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s23pack
-Successfully installed s23pack-0.0.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s23pack-0.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
@@ -1342,15 +1393,12 @@ Successfully installed s23pack-0.0.1
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check that the command still works</span>
-<span class="o">!</span><span class="w"> </span>oa<span class="w"> </span>carnegie<span class="w"> </span>mellon
+<span class="o">!</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/home/jupyter-jkitchin@andrew.cm-11dd7/.local/bin<span class="w"> </span>oa<span class="w"> </span>carnegie<span class="w"> </span>mellon
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carnegie Mellon University                            121653   4962826
-Carnegie Mellon University Qatar                         695      9705
-Carnegie Mellon University Australia                     100      2188
-Carnegie Mellon University Africa                        186      1153
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/bin/sh: 1: oa: not found
 </pre></div>
 </div>
 </div>
@@ -1418,13 +1466,13 @@ git commit -am &quot;move openalex_institutions function out of oa into utils.py
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 66c51d4] ignore checkpoint files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main e4a29cf] ignore checkpoint files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 1 insertion(+)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main f2ffad7] move openalex_institutions function out of oa into utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 3d1ef57] move openalex_institutions function out of oa into utils.py
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 3 files changed, 22 insertions(+), 22 deletions(-)
@@ -1557,64 +1605,37 @@ git log --oneline
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f2ffad7 move openalex_institutions function out of oa into utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3d1ef57 move openalex_institutions function out of oa into utils.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66c51d4 ignore checkpoint files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>e4a29cf ignore checkpoint files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8779f1f First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>808e657 First set of files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7a45158 add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>d5aa34a add ignore files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7830d88 Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>e842d75 Initial readme.
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can also use a hash to indicate which version you want to see.</p>
+<p>You can also use a hash to indicate which version you want to see. I use a relative notation here that means the second to last commit from HEAD.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
 cd src
-git show 20e1b0e:s23pack/utils.py
+git show HEAD~2:s23pack/utils.py
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fatal: invalid object name &#39;20e1b0e&#39;.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>def hello(name):
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CalledProcessError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_cell_magic</span><span class="p">(</span><span class="s1">&#39;bash&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;cd src</span><span class="se">\n</span><span class="s1">git show 20e1b0e:s23pack/utils.py</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_cell_magic</span><span class="nt">(self, magic_name, line, cell)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2476</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2477</span>     <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">magic_arg_s</span><span class="p">,</span> <span class="n">cell</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2478</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2481</span> <span class="c1"># when using magics with decodator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2482</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/magics/script.py:153,</span> in <span class="ni">ScriptMagics._make_script_magic.&lt;locals&gt;.named_script_magic</span><span class="nt">(line, cell)</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="n">line</span> <span class="o">=</span> <span class="n">script</span>
-<span class="ne">--&gt; </span><span class="mi">153</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shebang</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">cell</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/magics/script.py:305,</span> in <span class="ni">ScriptMagics.shebang</span><span class="nt">(self, line, cell)</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">raise_error</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">301</span>     <span class="c1"># If we get here and p.returncode is still None, we must have</span>
-<span class="g g-Whitespace">    </span><span class="mi">302</span>     <span class="c1"># killed it but not yet seen its return code. We don&#39;t wait for it,</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span>     <span class="c1"># in case it&#39;s stuck in uninterruptible sleep. -9 = SIGKILL</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="n">rc</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">9</span>
-<span class="ne">--&gt; </span><span class="mi">305</span>     <span class="k">raise</span> <span class="n">CalledProcessError</span><span class="p">(</span><span class="n">rc</span><span class="p">,</span> <span class="n">cell</span><span class="p">)</span>
-
-<span class="ne">CalledProcessError</span>: Command &#39;b&#39;cd src\ngit show 20e1b0e:s23pack/utils.py\n&#39;&#39; returned non-zero exit status 128.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    print(f&#39;Hi there {name}&#39;)
 </pre></div>
 </div>
 </div>
@@ -1666,7 +1687,7 @@ pytest
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">CalledProcessError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_cell_magic</span><span class="p">(</span><span class="s1">&#39;bash&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;cd src</span><span class="se">\n</span><span class="s1">pytest</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_cell_magic</span><span class="nt">(self, magic_name, line, cell)</span>
@@ -1756,7 +1777,7 @@ pytest
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">CalledProcessError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">49</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_cell_magic</span><span class="p">(</span><span class="s1">&#39;bash&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;cd src</span><span class="se">\n</span><span class="s1">pip install . &gt; /dev/null  # silent installation</span><span class="se">\n</span><span class="s1">pytest</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:2478,</span> in <span class="ni">InteractiveShell.run_cell_magic</span><span class="nt">(self, magic_name, line, cell)</span>
@@ -1786,8 +1807,8 @@ pytest
 </div>
 </div>
 </div>
-<p>Re-read <a class="reference external" href="https://merely-useful.tech/py-rse/scripting.html">https://merely-useful.tech/py-rse/scripting.html</a> on building python functions and scripts.</p>
-<p>Then, read <a class="reference external" href="https://merely-useful.tech/py-rse/packaging.html">https://merely-useful.tech/py-rse/packaging.html</a> about python packages. It is a little more involved than we have done so far, but you should be in good shape to read about it now. We do not use virtual environments here. I think they add a layer of complexity we don’t want now, and there are many complications in using them (mostly in the form of what virtual environment am I in, and is it active).</p>
+<p>Re-read <a class="reference external" href="https://merely-useful.tech/py-rse/scripting.html"></a> on building python functions and scripts.</p>
+<p>Then, read <a class="reference external" href="https://merely-useful.tech/py-rse/packaging.html"></a> about python packages. It is a little more involved than we have done so far, but you should be in good shape to read about it now. We do not use virtual environments here. I think they add a layer of complexity we don’t want now, and there are many complications in using them (mostly in the form of what virtual environment am I in, and is it active).</p>
 </div>
 
     <script type="text/x-thebe-config">

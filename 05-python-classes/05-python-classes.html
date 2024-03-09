@@ -407,12 +407,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Today we will touch on programming with classes in Python and Jupyter. Classes allow you to “encapsulate” data and methods. We will also learn about rich outputs in Jupyter notebooks.</p>
 <p>If you are not familiar with classes in Python you should review them. Here are some reasonable introductions:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://towardsdatascience.com/introduction-to-python-classes-da526ff745df">https://towardsdatascience.com/introduction-to-python-classes-da526ff745df</a></p></li>
-<li><p><a class="reference external" href="https://python.plainenglish.io/python-classes-and-objects-a13edcd2bc1e">https://python.plainenglish.io/python-classes-and-objects-a13edcd2bc1e</a></p></li>
-<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/classes.html">https://docs.python.org/3/tutorial/classes.html</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/introduction-to-python-classes-da526ff745df"></a></p></li>
+<li><p><a class="reference external" href="https://python.plainenglish.io/python-classes-and-objects-a13edcd2bc1e"></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/classes.html"></a></p></li>
 </ul>
 <p>I will assume you have some experience with classes, and only introduce what we need for this lecture as we go.  We are going to create a single class today to represent a <code class="docutils literal notranslate"><span class="pre">Works</span></code> object. The class will get data for a doi, and provide some representations and methods that are convenient.</p>
-<p><a class="reference external" href="https://api.openalex.org/works/https://doi.org/10.1021/acscatal.5b00538">https://api.openalex.org/works/https://doi.org/10.1021/acscatal.5b00538</a></p>
+<p><a class="reference external" href="https://api.openalex.org/works/https://doi.org/10.1021/acscatal.5b00538"></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -710,8 +710,8 @@ const thebe_selector_output = ".output, .cell_output"
   &#39;is_accepted&#39;: True,
   &#39;is_published&#39;: True},
  &#39;sustainable_development_goals&#39;: [{&#39;score&#39;: 0.47,
-   &#39;id&#39;: &#39;https://metadata.un.org/sdg/9&#39;,
-   &#39;display_name&#39;: &#39;Industry, innovation and infrastructure&#39;}],
+   &#39;display_name&#39;: &#39;Industry, innovation and infrastructure&#39;,
+   &#39;id&#39;: &#39;https://metadata.un.org/sdg/9&#39;}],
  &#39;grants&#39;: [{&#39;funder&#39;: &#39;https://openalex.org/F4320310207&#39;,
    &#39;funder_display_name&#39;: &#39;Carnegie Mellon University&#39;,
    &#39;award_id&#39;: None},
@@ -838,7 +838,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Works at 0x7fbb84346c10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Works at 0x7febd8ce0f10&gt;
 </pre></div>
 </div>
 </div>
@@ -1131,7 +1131,7 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">ris</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">fields</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;journal-article&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;type_crossref&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;journal-article&quot;</span><span class="p">:</span>
             <span class="n">fields</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;TY  - JOUR&quot;</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Unsupported type </span><span class="si">{self.data[&#39;type&#39;]}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1168,24 +1168,17 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">121</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span>         <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">120</span> <span class="n">w</span> <span class="o">=</span> <span class="n">Works</span><span class="p">(</span><span class="s2">&quot;https://doi.org/10.1021/acscatal.5b00538&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">121</span> <span class="n">w</span><span class="o">.</span><span class="n">ris</span>
-
-<span class="nn">Cell In[9], line 92,</span> in <span class="ni">Works.ris</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="n">fields</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;TY  - JOUR&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">92</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Unsupported type </span><span class="si">{self.data[&#39;type&#39;]}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span> <span class="k">for</span> <span class="n">author</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;authorships&quot;</span><span class="p">]:</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">fields</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;AU  - </span><span class="si">{</span><span class="n">author</span><span class="p">[</span><span class="s2">&quot;author&quot;</span><span class="p">][</span><span class="s2">&quot;display_name&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
-
-<span class="ne">Exception</span>: Unsupported type {self.data[&#39;type&#39;]}
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><pre>TY  - JOUR
+AU  - John R. Kitchin
+PY  - 2015
+TI  - Examples of Effective Data Sharing in Scientific Publishing
+JO  - ACS Catalysis
+VL  - 5
+IS  - 6
+SP  - 3894
+EP  - 3899
+DO  - https://doi.org/10.1021/acscatal.5b00538
+ER  -</pre><br><a href="data:text/plain;base64,VFkgIC0gSk9VUgpBVSAgLSBKb2huIFIuIEtpdGNoaW4KUFkgIC0gMjAxNQpUSSAgLSBFeGFtcGxlcyBvZiBFZmZlY3RpdmUgRGF0YSBTaGFyaW5nIGluIFNjaWVudGlmaWMgUHVibGlzaGluZwpKTyAgLSBBQ1MgQ2F0YWx5c2lzClZMICAtIDUKSVMgIC0gNgpTUCAgLSAzODk0CkVQICAtIDM4OTkKRE8gIC0gaHR0cHM6Ly9kb2kub3JnLzEwLjEwMjEvYWNzY2F0YWwuNWIwMDUzOApFUiAgLQ==" download="ris">Download RIS</a></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1306,7 +1299,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>There are some exceptions caught because some entries do not have the data we try to access in the returned results. For example, <a class="reference external" href="https://openalex.org/W2748952813">https://openalex.org/W2748952813</a> does not seem to have a primary_location.</p>
+<p>There are some exceptions caught because some entries do not have the data we try to access in the returned results. For example, <a class="reference external" href="https://openalex.org/W2748952813"></a> does not seem to have a primary_location.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Works</span><span class="p">(</span><span class="s2">&quot;https://openalex.org/W2748952813&quot;</span><span class="p">)</span>
