@@ -47,7 +47,7 @@ html:
 launch_buttons:
   colab_url: "https://colab.research.google.com"
   notebook_interface: "jupyterlab"
-  jupyterhub_url: "https://lab.amdatascience.com/"
+  jupyterhub_url: "https://jupyterhub-dev.cheme.cmu.edu"
   
 sphinx:
   extra_extensions:
