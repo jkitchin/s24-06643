@@ -41,7 +41,7 @@ html:
   use_repository_button: true
   comments:
     utterances:
-      repo: jkitchin/dsmles
+      repo: jkitchin/s24-06643
     hypothesis: true  
 
 launch_buttons:
