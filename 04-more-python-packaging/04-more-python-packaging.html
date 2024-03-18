@@ -506,11 +506,11 @@ rm -fr src
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span> 
-mkdir -p src/s23pack
+mkdir -p src/s24pack
 cd src
 git init
 git checkout -b main
-echo -e &quot;s23 package\n===========&quot; &gt; README.md
+echo -e &quot;s24 package\n===========&quot; &gt; README.md
 git add README.md
 git commit README.md -m &quot;Initial readme.&quot;
 git status
@@ -554,7 +554,7 @@ git status
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Switched to a new branch &#39;main&#39;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) 9a3f3df] Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) 65bd585] Initial readme.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 2 insertions(+)
@@ -579,14 +579,14 @@ git status
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/setup.py
 <span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
-<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;s23pack&#39;</span><span class="p">,</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;s24pack&#39;</span><span class="p">,</span>
       <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.0.1&#39;</span><span class="p">,</span>
-      <span class="n">description</span><span class="o">=</span><span class="s1">&#39;s23 package&#39;</span><span class="p">,</span>
+      <span class="n">description</span><span class="o">=</span><span class="s1">&#39;s24 package&#39;</span><span class="p">,</span>
       <span class="n">maintainer</span><span class="o">=</span><span class="s1">&#39;John Kitchin&#39;</span><span class="p">,</span>
       <span class="n">maintainer_email</span><span class="o">=</span><span class="s1">&#39;jkitchin@cmu.edu&#39;</span><span class="p">,</span>
       <span class="n">license</span><span class="o">=</span><span class="s1">&#39;MIT&#39;</span><span class="p">,</span>
-      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;s23pack&#39;</span><span class="p">],</span>
-      <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;oa = s23pack.main:main&#39;</span><span class="p">]},</span>
+      <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;s24pack&#39;</span><span class="p">],</span>
+      <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;oa = s24pack.main:main&#39;</span><span class="p">]},</span>
       <span class="n">long_description</span><span class="o">=</span><span class="s1">&#39;&#39;&#39;A long</span>
 <span class="s1">      multiline description.&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
@@ -602,7 +602,7 @@ git status
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%writefile src/LICENSE
-Copyright 2023 John Kitchin
+Copyright 2024 John Kitchin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -621,36 +621,36 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 <p>The next three cells create the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>, <code class="docutils literal notranslate"><span class="pre">utils.py</span></code>, and the script file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s23pack/__init__.py
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;loaded s23pack&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s24pack/__init__.py
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;loaded s24pack&#39;</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">hello</span>
 <span class="kn">from</span> <span class="nn">.main</span> <span class="kn">import</span> <span class="n">openalex_institution</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing src/s23pack/__init__.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing src/s24pack/__init__.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s23pack/utils.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s24pack/utils.py
 <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hi there </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing src/s23pack/utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing src/s24pack/utils.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s23pack/main.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s24pack/main.py
 <span class="kn">import</span> <span class="nn">click</span>
 
 <span class="kn">import</span> <span class="nn">requests</span> 
@@ -680,7 +680,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing src/s23pack/main.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing src/s24pack/main.py
 </pre></div>
 </div>
 </div>
@@ -695,7 +695,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">src</span>
 ├── LICENSE
 ├── README.md
-├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s23pack</span>
+├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s24pack</span>
 │   ├── __init__.py
 │   ├── main.py
 │   └── utils.py
@@ -711,19 +711,19 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">)</span>
 
-<span class="kn">import</span> <span class="nn">s23pack</span>
+<span class="kn">import</span> <span class="nn">s24pack</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loaded s23pack
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loaded s24pack
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s23pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Class&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s24pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Class&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -771,23 +771,25 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \ done
-?25hBuilding wheels for collected packages: s23pack
+?25hBuilding wheels for collected packages: s24pack
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for s23pack (setup.py) ... ?25l-
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for s24pack (setup.py) ... ?25l-
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> | done
-?25h  Created wheel for s23pack: filename=s23pack-0.0.1-py3-none-any.whl size=3077 sha256=4a15804d3f058a61f2e932fdad0e6a1b2a2a0f5afa3c45eb86d4606a83dfe60e
-  Stored in directory: /tmp/pip-ephem-wheel-cache-p7kbpxsg/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
-Successfully built s23pack
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
+?25h  Created wheel for s24pack: filename=s24pack-0.0.1-py3-none-any.whl size=3076 sha256=d3d9c0862cd852ee7e58b29fffa14bc0324819cbefd452562433fb64f7e20c88
+  Stored in directory: /tmp/pip-ephem-wheel-cache-w131we3l/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
+Successfully built s24pack
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s23pack
-Successfully installed s23pack-0.0.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s24pack
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s24pack-0.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
@@ -796,7 +798,7 @@ Successfully installed s23pack-0.0.1
 </div>
 </div>
 </div>
-<p>The installation changed some things. First, It installed some packages in your local site packages. You can see there are some new s23pack directories.</p>
+<p>The installation changed some things. First, It installed some packages in your local site packages. You can see there are some new s24pack directories.</p>
 <p>Next, there are some changes in the src directory. There is a build directory, and an s23pack.egg-info directory.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -811,11 +813,11 @@ Successfully installed s23pack-0.0.1
 ├── <span class=" -Color -Color-Bold -Color-Bold-Blue">build</span>
 │   ├── <span class=" -Color -Color-Bold -Color-Bold-Blue">bdist.linux-x86_64</span>
 │   └── <span class=" -Color -Color-Bold -Color-Bold-Blue">lib</span>
-│       └── <span class=" -Color -Color-Bold -Color-Bold-Blue">s23pack</span>
+│       └── <span class=" -Color -Color-Bold -Color-Bold-Blue">s24pack</span>
 │           ├── __init__.py
 │           ├── main.py
 │           └── utils.py
-├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s23pack</span>
+├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s24pack</span>
 │   ├── __init__.py
 │   ├── <span class=" -Color -Color-Bold -Color-Bold-Blue">__pycache__</span>
 │   │   ├── __init__.cpython-38.pyc
@@ -823,7 +825,7 @@ Successfully installed s23pack-0.0.1
 │   │   └── utils.cpython-38.pyc
 │   ├── main.py
 │   └── utils.py
-├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s23pack.egg-info</span>
+├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s24pack.egg-info</span>
 │   ├── PKG-INFO
 │   ├── SOURCES.txt
 │   ├── dependency_links.txt
@@ -838,7 +840,7 @@ Successfully installed s23pack-0.0.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">s23pack</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">s24pack</span>
 </pre></div>
 </div>
 </div>
@@ -847,7 +849,7 @@ Successfully installed s23pack-0.0.1
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;s23pack&#39;</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;s24pack&#39;</span><span class="p">)):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="k">break</span>
 </pre></div>
@@ -861,7 +863,7 @@ Successfully installed s23pack-0.0.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s23pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s24pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -895,17 +897,18 @@ Successfully installed s23pack-0.0.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loaded s23pack
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loaded s24pack
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carnegie Mellon University                            121925   4978056
 Carnegie Mellon University Qatar                         697      9769
-Carnegie Mellon University Australia                      93      2191
+Carnegie Mellon University Australia                      93      2194
 Carnegie Mellon University Africa                        187      1179
 </pre></div>
 </div>
 </div>
 </div>
+<p>There is a way to temporarily define the path at the command line here.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
@@ -953,14 +956,14 @@ PATH=/home/jupyter-jkitchin@andrew.cm-11dd7/.local/bin oa carnegie mellon
 <h2>Uninstall your package<a class="headerlink" href="#uninstall-your-package" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>uninstall<span class="w"> </span>-y<span class="w"> </span>s23pack
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>uninstall<span class="w"> </span>-y<span class="w"> </span>s24pack
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found existing installation: s23pack 0.0.1
-Uninstalling s23pack-0.0.1:
-  Successfully uninstalled s23pack-0.0.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found existing installation: s24pack 0.0.1
+Uninstalling s24pack-0.0.1:
+  Successfully uninstalled s24pack-0.0.1
 </pre></div>
 </div>
 </div>
@@ -970,7 +973,7 @@ Uninstalling s23pack-0.0.1:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;s23pack&#39;</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;s24pack&#39;</span><span class="p">)):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="k">break</span>
 </pre></div>
@@ -1014,10 +1017,10 @@ git status
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	build/
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	s23pack.egg-info/
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	s24pack.egg-info/
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	s23pack/
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	s24pack/
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	setup.py
@@ -1044,11 +1047,11 @@ git status
 ├── <span class=" -Color -Color-Bold -Color-Bold-Blue">build</span>
 │   ├── <span class=" -Color -Color-Bold -Color-Bold-Blue">bdist.linux-x86_64</span>
 │   └── <span class=" -Color -Color-Bold -Color-Bold-Blue">lib</span>
-│       └── <span class=" -Color -Color-Bold -Color-Bold-Blue">s23pack</span>
+│       └── <span class=" -Color -Color-Bold -Color-Bold-Blue">s24pack</span>
 │           ├── __init__.py
 │           ├── main.py
 │           └── utils.py
-├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s23pack</span>
+├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s24pack</span>
 │   ├── __init__.py
 │   ├── <span class=" -Color -Color-Bold -Color-Bold-Blue">__pycache__</span>
 │   │   ├── __init__.cpython-38.pyc
@@ -1056,7 +1059,7 @@ git status
 │   │   └── utils.cpython-38.pyc
 │   ├── main.py
 │   └── utils.py
-├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s23pack.egg-info</span>
+├── <span class=" -Color -Color-Bold -Color-Bold-Blue">s24pack.egg-info</span>
 │   ├── PKG-INFO
 │   ├── SOURCES.txt
 │   ├── dependency_links.txt
@@ -1110,7 +1113,7 @@ git status
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	LICENSE
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	s23pack/
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	s24pack/
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	setup.py
@@ -1142,7 +1145,7 @@ git status
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>build
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s23pack.egg-info
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s24pack.egg-info
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hint: Use -f if you really want to add them.
@@ -1154,7 +1157,7 @@ git status
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hint: &quot;git config advice.addIgnoredFile false&quot;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 90c6a22] add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main c842e13] add ignore files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 4 insertions(+)
@@ -1175,13 +1178,13 @@ git status
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   LICENSE
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   s23pack/__init__.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   s24pack/__init__.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   s23pack/main.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   s24pack/main.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   s23pack/utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   s24pack/utils.py
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	new file:   setup.py
@@ -1202,7 +1205,7 @@ git commit -m &quot;First set of files&quot;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 91a3fc5] First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 52f7805] First set of files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 5 files changed, 49 insertions(+)
@@ -1211,13 +1214,13 @@ git commit -m &quot;First set of files&quot;
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 LICENSE
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 s23pack/__init__.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 s24pack/__init__.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 s23pack/main.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 s24pack/main.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 s23pack/utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 s24pack/utils.py
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> create mode 100644 setup.py
@@ -1241,13 +1244,13 @@ git log --graph --oneline
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nothing to commit, working tree clean
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 91a3fc5 First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 52f7805 First set of files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 90c6a22 add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* c842e13 add ignore files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 9a3f3df Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 65bd585 Initial readme.
 </pre></div>
 </div>
 </div>
@@ -1292,7 +1295,7 @@ git status
 <p>The <code class="docutils literal notranslate"><span class="pre">oa</span></code> script is not as reusable as we might like. The function in it does not need to be there. Let’s move it to the <a class="reference external" href="http://utils.py">utils.py</a> file.  This requires us to change several files. In addition to moving the function, we have to move some imports, and modify the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file. Let’s go ahead and do that.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s23pack/utils.py 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s24pack/utils.py 
 <span class="kn">import</span> <span class="nn">requests</span> 
 <span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span> 
 
@@ -1319,14 +1322,14 @@ git status
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s23pack/utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s24pack/utils.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s23pack/main.py 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s24pack/main.py 
 <span class="kn">import</span> <span class="nn">click</span>
 <span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">openalex_institution</span>
 
@@ -1338,20 +1341,20 @@ git status
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s23pack/main.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s24pack/main.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s23pack/__init__.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s24pack/__init__.py
 <span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">hello</span><span class="p">,</span> <span class="n">openalex_institution</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s23pack/__init__.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s24pack/__init__.py
 </pre></div>
 </div>
 </div>
@@ -1371,22 +1374,22 @@ git status
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l- done
-?25hBuilding wheels for collected packages: s23pack
+?25hBuilding wheels for collected packages: s24pack
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for s23pack (setup.py) ... ?25l-
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for s24pack (setup.py) ... ?25l-
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for s23pack: filename=s23pack-0.0.1-py3-none-any.whl size=3096 sha256=4f31668faf4d85afa35f006dcf8081df7e3c279b119e357629730633cb681bf7
-  Stored in directory: /tmp/pip-ephem-wheel-cache-9jalsvay/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
-Successfully built s23pack
+?25h  Created wheel for s24pack: filename=s24pack-0.0.1-py3-none-any.whl size=3095 sha256=3e0cd15529953cec50edcffdb94ba3f9034d16801596fc292f4f0634298451db
+  Stored in directory: /tmp/pip-ephem-wheel-cache-9l21zhn0/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
+Successfully built s24pack
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s23pack
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s24pack
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s23pack-0.0.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s24pack-0.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
@@ -1397,8 +1400,8 @@ Successfully built s23pack
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">s23pack</span>
-<span class="n">s23pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">s24pack</span>
+<span class="n">s24pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1411,14 +1414,14 @@ Successfully built s23pack
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check that our function works.</span>
-<span class="n">s23pack</span><span class="o">.</span><span class="n">openalex_institution</span><span class="p">(</span><span class="s1">&#39;carnegie+mellon&#39;</span><span class="p">)</span>
+<span class="n">s24pack</span><span class="o">.</span><span class="n">openalex_institution</span><span class="p">(</span><span class="s1">&#39;carnegie+mellon&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Carnegie Mellon University                            121925   4978056&#39;,
  &#39;Carnegie Mellon University Qatar                         697      9769&#39;,
- &#39;Carnegie Mellon University Australia                      93      2191&#39;,
+ &#39;Carnegie Mellon University Australia                      93      2194&#39;,
  &#39;Carnegie Mellon University Africa                        187      1179&#39;]
 </pre></div>
 </div>
@@ -1472,13 +1475,13 @@ git status
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	modified:   .gitignore
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	modified:   s23pack/__init__.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	modified:   s24pack/__init__.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	modified:   s23pack/main.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	modified:   s24pack/main.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	modified:   s23pack/utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	modified:   s24pack/utils.py
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1500,13 +1503,13 @@ git commit -am &quot;move openalex_institutions function out of oa into utils.py
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main f346d76] ignore checkpoint files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main df44c11] ignore checkpoint files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 1 insertion(+)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 8425e87] move openalex_institutions function out of oa into utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main bf87eec] move openalex_institutions function out of oa into utils.py
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 3 files changed, 22 insertions(+), 22 deletions(-)
@@ -1539,7 +1542,7 @@ git status
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
 cd src
-git show v0.0.1:s23pack/utils.py
+git show v0.0.1:s24pack/utils.py
 </pre></div>
 </div>
 </div>
@@ -1557,7 +1560,7 @@ git show v0.0.1:s23pack/utils.py
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
 cd src
-git show HEAD:s23pack/utils.py
+git show HEAD:s24pack/utils.py
 </pre></div>
 </div>
 </div>
@@ -1639,19 +1642,19 @@ git log --oneline
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8425e87 move openalex_institutions function out of oa into utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bf87eec move openalex_institutions function out of oa into utils.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f346d76 ignore checkpoint files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>df44c11 ignore checkpoint files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91a3fc5 First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52f7805 First set of files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90c6a22 add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c842e13 add ignore files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9a3f3df Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65bd585 Initial readme.
 </pre></div>
 </div>
 </div>
@@ -1661,7 +1664,7 @@ git log --oneline
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
 cd src
-git show HEAD~2:s23pack/utils.py
+git show HEAD~2:s24pack/utils.py
 </pre></div>
 </div>
 </div>
@@ -1693,10 +1696,10 @@ git show HEAD~2:s23pack/utils.py
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/test_oa.py
-<span class="kn">import</span> <span class="nn">s23pack</span>
+<span class="kn">import</span> <span class="nn">s24pack</span>
 
 <span class="k">def</span> <span class="nf">test_hello</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">s23pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Hi there John&#39;</span>
+    <span class="k">assert</span> <span class="n">s24pack</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Hi there John&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1755,7 +1758,7 @@ pytest
 <p>The probem is that we only printed the result in <code class="docutils literal notranslate"><span class="pre">utils.hello</span></code>, and so the function returns None. You can fix it like this. It is moderately tedious that you have to reinstall the package after doing this. That is avoidable, but we save that for a later lesson.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s23pack/utils.py 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> src/s24pack/utils.py 
 <span class="kn">import</span> <span class="nn">requests</span> 
 <span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span> 
 
@@ -1782,7 +1785,7 @@ pytest
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s23pack/utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting src/s24pack/utils.py
 </pre></div>
 </div>
 </div>
@@ -1841,8 +1844,8 @@ pytest
 </div>
 </div>
 </div>
-<p>Re-read <a class="reference external" href="https://merely-useful.tech/py-rse/scripting.html"></a> on building python functions and scripts.</p>
-<p>Then, read <a class="reference external" href="https://merely-useful.tech/py-rse/packaging.html"></a> about python packages. It is a little more involved than we have done so far, but you should be in good shape to read about it now. We do not use virtual environments here. I think they add a layer of complexity we don’t want now, and there are many complications in using them (mostly in the form of what virtual environment am I in, and is it active).</p>
+<p>Re-read <a class="reference external" href="https://third-bit.com/py-rse/scripting.html">https://third-bit.com/py-rse/scripting.html</a> on building python functions and scripts.</p>
+<p>Then, read <a class="reference external" href="https://third-bit.com/py-rse/packaging.html">https://third-bit.com/py-rse/packaging.html</a> about python packages. It is a little more involved than we have done so far, but you should be in good shape to read about it now. We do not use virtual environments here. I think they add a layer of complexity we don’t want now, and there are many complications in using them (mostly in the form of what virtual environment am I in, and is it active).</p>
 </div>
 
     <script type="text/x-thebe-config">
