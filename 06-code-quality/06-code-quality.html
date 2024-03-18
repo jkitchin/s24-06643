@@ -133,6 +133,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-introduction/00-introduction-terminals.html">
@@ -187,6 +192,35 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
    Syllabus for  06-643 Creating Scientific Research Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/project/project-proposal.html">
+   Project proposal
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About the book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../build-statistics.html">
+   Build statistics
   </a>
  </li>
 </ul>
@@ -747,13 +781,15 @@ git init
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for s23bib: filename=s23bib-0.0.1-py3-none-any.whl size=2371 sha256=11738ba5dc8e49e396c855f4181634742f2e457652a1cd8d203744fbee021db9
-  Stored in directory: /tmp/pip-ephem-wheel-cache-z3q6a8mw/wheels/cc/4e/19/30301d2f774e087d79d12fcb86508628f324ca9e0b3cc0d525
+?25h  Created wheel for s23bib: filename=s23bib-0.0.1-py3-none-any.whl size=2371 sha256=688d8aab90ed5e2a7fc867d2ffd254fe1c51eb028f2cdaf0cefd2d6faba00120
+  Stored in directory: /tmp/pip-ephem-wheel-cache-3b3bnxud/wheels/cc/4e/19/30301d2f774e087d79d12fcb86508628f324ca9e0b3cc0d525
 Successfully built s23bib
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s23bib
-Successfully installed s23bib-0.0.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s23bib-0.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
@@ -916,10 +952,10 @@ black black-example.py --diff
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- black-example.py	2024-03-17 18:20:29.347746+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- black-example.py	2024-03-18 00:22:59.864152+00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+++ black-example.py	2024-03-17 18:20:29.483264+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+++ black-example.py	2024-03-18 00:22:59.999492+00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@@ -1,12 +1,12 @@
@@ -1058,8 +1094,8 @@ def f(x):
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/s23bib/test_sort.py</span>
-<span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/setup.py</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/setup.py</span>
+<span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/s23bib/test_sort.py</span>
 <span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/s23bib/utils.py</span>
 
 <span class=" -Color -Color-Bold">All done! ✨ 🍰 ✨</span>
@@ -1727,7 +1763,7 @@ git commit -m &quot;adding pyfiles&quot;
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>running precommit in /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master (root-commit) 7d184b6] adding pyfiles
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master (root-commit) 8d8f937] adding pyfiles
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 15 insertions(+)
@@ -1833,13 +1869,13 @@ git log
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>commit 7d184b6282a4ae1ddd3f32ec22c980cd9c6be2ac
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>commit 8d8f9378d4e0de0b879bc77067b7e5c0a3d2158e
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: Your Name &lt;you@example.com&gt;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date:   Sun Mar 17 18:20:37 2024 +0000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date:   Mon Mar 18 00:23:07 2024 +0000
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1943,10 +1979,10 @@ git commit --no-verify -m &quot;adding pyfiles&quot;
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting identify&gt;=1.0.0 (from pre-commit)
   Downloading identify-2.5.35-py2.py3-none-any.whl.metadata (4.4 kB)
 Collecting nodeenv&gt;=0.11.1 (from pre-commit)
+  Downloading nodeenv-1.8.0-py2.py3-none-any.whl.metadata (21 kB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading nodeenv-1.8.0-py2.py3-none-any.whl.metadata (21 kB)
-Requirement already satisfied: pyyaml&gt;=5.1 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from pre-commit) (6.0.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyyaml&gt;=5.1 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from pre-commit) (6.0.1)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting virtualenv&gt;=20.10.0 (from pre-commit)
@@ -1965,23 +2001,23 @@ Requirement already satisfied: platformdirs&lt;5,&gt;=3.9.1 in /opt/hostedtoolca
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading pre_commit-3.5.0-py2.py3-none-any.whl (203 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/203.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">203.7/203.7 kB</span> <span class=" -Color -Color-Red">12.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">203.7/203.7 kB</span> <span class=" -Color -Color-Red">17.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Downloading identify-2.5.35-py2.py3-none-any.whl (98 kB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading identify-2.5.35-py2.py3-none-any.whl (98 kB)
-?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/98.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">98.9/98.9 kB</span> <span class=" -Color -Color-Red">32.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/98.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">98.9/98.9 kB</span> <span class=" -Color -Color-Red">31.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
 Downloading virtualenv-20.25.1-py3-none-any.whl (3.8 MB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/3.8 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">3.8/3.8 MB</span> <span class=" -Color -Color-Red">147.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.8/3.8 MB</span> <span class=" -Color -Color-Red">104.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">3.8/3.8 MB</span> <span class=" -Color -Color-Red">142.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.8/3.8 MB</span> <span class=" -Color -Color-Red">99.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/468.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">468.9/468.9 kB</span> <span class=" -Color -Color-Red">80.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">468.9/468.9 kB</span> <span class=" -Color -Color-Red">82.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading filelock-3.13.1-py3-none-any.whl (11 kB)
 </pre></div>
 </div>
