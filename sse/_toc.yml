@@ -17,6 +17,7 @@ parts:
     - file: 07-github-intro/07-github-intro.ipynb
     - file: 08-github-actions/08-github-actions.ipynb
     - file: 09-wrapup/09-wrapup.ipynb
+    - file: 11-advanced-packaging/advanced-packaging.ipynb
     - file: syllabus.ipynb    
     - file: genindex
 
