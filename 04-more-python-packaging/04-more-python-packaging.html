@@ -212,6 +212,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/code-quality/code-quality.html">
+   Code quality
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../assignments/i10-index/i10-index.html">
    i10-index
   </a>
@@ -574,7 +579,7 @@ git status
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Switched to a new branch &#39;main&#39;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) 8aaa525] Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) 36a0f29] Initial readme.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 2 insertions(+)
@@ -797,16 +802,17 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for s24pack (setup.py) ... ?25l-
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \ done
-?25h  Created wheel for s24pack: filename=s24pack-0.0.1-py3-none-any.whl size=3076 sha256=5d6f4f60cc45de5d7e4238d49aee2da752e4f3e7caff197a23f6b115349eb011
-  Stored in directory: /tmp/pip-ephem-wheel-cache-s_hf3_q3/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
+?25h  Created wheel for s24pack: filename=s24pack-0.0.1-py3-none-any.whl size=3076 sha256=2716808aada125705ed7cbcc6095b5c2ff749c177fffb90257ecd3a9a849d3fa
+  Stored in directory: /tmp/pip-ephem-wheel-cache-7dxy3l2c/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
 Successfully built s24pack
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s24pack
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s24pack-0.0.1
+Successfully installed s24pack-0.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
@@ -1174,7 +1180,7 @@ git status
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hint: &quot;git config advice.addIgnoredFile false&quot;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 8192d51] add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 39f4d71] add ignore files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 4 insertions(+)
@@ -1222,7 +1228,7 @@ git commit -m &quot;First set of files&quot;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main b53b2be] First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 1e8a645] First set of files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 5 files changed, 49 insertions(+)
@@ -1261,13 +1267,13 @@ git log --graph --oneline
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nothing to commit, working tree clean
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* b53b2be First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 1e8a645 First set of files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 8192d51 add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 39f4d71 add ignore files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 8aaa525 Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 36a0f29 Initial readme.
 </pre></div>
 </div>
 </div>
@@ -1401,13 +1407,15 @@ git status
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for s24pack: filename=s24pack-0.0.1-py3-none-any.whl size=3095 sha256=86b2c1d1dadee48a3021660b2c0f78771d11b2017607426ce2edd2b6b42b9fb7
-  Stored in directory: /tmp/pip-ephem-wheel-cache-f07zwmm0/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
+?25h  Created wheel for s24pack: filename=s24pack-0.0.1-py3-none-any.whl size=3095 sha256=964537843f11c79976fb9fa80b860cab0f61e4920aa89730972cbf3716e9e355
+  Stored in directory: /tmp/pip-ephem-wheel-cache-sykxsn83/wheels/7d/1e/67/47cbc5a19eebb7af2e28d752410df6158fb60e41bb2f10063b
 Successfully built s24pack
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s24pack
-Successfully installed s24pack-0.0.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s24pack-0.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
@@ -1521,13 +1529,13 @@ git commit -am &quot;move openalex_institutions function out of oa into utils.py
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 61038c1] ignore checkpoint files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 79bc87c] ignore checkpoint files
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 1 insertion(+)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 4b4569e] move openalex_institutions function out of oa into utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main 9f09965] move openalex_institutions function out of oa into utils.py
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 3 files changed, 22 insertions(+), 22 deletions(-)
@@ -1660,19 +1668,19 @@ git log --oneline
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4b4569e move openalex_institutions function out of oa into utils.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9f09965 move openalex_institutions function out of oa into utils.py
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61038c1 ignore checkpoint files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79bc87c ignore checkpoint files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b53b2be First set of files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1e8a645 First set of files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8192d51 add ignore files
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39f4d71 add ignore files
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8aaa525 Initial readme.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>36a0f29 Initial readme.
 </pre></div>
 </div>
 </div>

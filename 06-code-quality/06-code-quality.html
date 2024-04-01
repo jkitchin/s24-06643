@@ -212,6 +212,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/code-quality/code-quality.html">
+   Code quality
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../assignments/i10-index/i10-index.html">
    i10-index
   </a>
@@ -801,15 +806,15 @@ git init
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for s23bib: filename=s23bib-0.0.1-py3-none-any.whl size=2371 sha256=2a9eeee2b040b117cf9cca77e5d0ae12478d98422134674dc1d99401bca51ce0
-  Stored in directory: /tmp/pip-ephem-wheel-cache-sxsxp6mo/wheels/cc/4e/19/30301d2f774e087d79d12fcb86508628f324ca9e0b3cc0d525
-Successfully built s23bib
+?25h  Created wheel for s23bib: filename=s23bib-0.0.1-py3-none-any.whl size=2371 sha256=c74ed51ec632db6153c6792e6c75f9ff20dc37c185a0b5a06d2a6ce7fd6d4afc
+  Stored in directory: /tmp/pip-ephem-wheel-cache-qb7qsase/wheels/cc/4e/19/30301d2f774e087d79d12fcb86508628f324ca9e0b3cc0d525
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully built s23bib
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: s23bib
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed s23bib-0.0.1
+Successfully installed s23bib-0.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
@@ -972,10 +977,10 @@ black black-example.py --diff
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- black-example.py	2024-04-01 17:56:03.397113+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- black-example.py	2024-04-01 20:09:18.961675+00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+++ black-example.py	2024-04-01 17:56:03.529938+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+++ black-example.py	2024-04-01 20:09:19.110981+00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@@ -1,12 +1,12 @@
@@ -1114,8 +1119,8 @@ def f(x):
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/setup.py</span>
-<span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/s23bib/utils.py</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/s23bib/utils.py</span>
+<span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/setup.py</span>
 <span class=" -Color -Color-Bold">reformatted /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package/s23bib/test_sort.py</span>
 
 <span class=" -Color -Color-Bold">All done! ✨ 🍰 ✨</span>
@@ -1328,7 +1333,9 @@ Options:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: flake8-docstrings in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (1.7.0)
 Requirement already satisfied: flake8&gt;=3 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from flake8-docstrings) (7.0.0)
 Requirement already satisfied: pydocstyle&gt;=2.1 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from flake8-docstrings) (6.3.0)
-Requirement already satisfied: mccabe&lt;0.8.0,&gt;=0.7.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from flake8&gt;=3-&gt;flake8-docstrings) (0.7.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mccabe&lt;0.8.0,&gt;=0.7.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from flake8&gt;=3-&gt;flake8-docstrings) (0.7.0)
 Requirement already satisfied: pycodestyle&lt;2.12.0,&gt;=2.11.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from flake8&gt;=3-&gt;flake8-docstrings) (2.11.1)
 Requirement already satisfied: pyflakes&lt;3.3.0,&gt;=3.2.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from flake8&gt;=3-&gt;flake8-docstrings) (3.2.0)
 Requirement already satisfied: snowballstemmer&gt;=2.2.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from pydocstyle&gt;=2.1-&gt;flake8-docstrings) (2.2.0)
@@ -1411,7 +1418,9 @@ Requirement already satisfied: snowballstemmer&gt;=2.2.0 in /opt/hostedtoolcache
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting package/s23bib/__init__.py
 Overwriting package/s23bib/utils.py
 Overwriting package/s23bib/test_sort.py
-Overwriting package/setup.py
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting package/setup.py
 </pre></div>
 </div>
 </div>
@@ -1783,7 +1792,7 @@ git commit -m &quot;adding pyfiles&quot;
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>running precommit in /home/runner/work/s24-06643/s24-06643/sse/06-code-quality/package
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master (root-commit) b61790d] adding pyfiles
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master (root-commit) 82833bd] adding pyfiles
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1 file changed, 15 insertions(+)
@@ -1889,13 +1898,13 @@ git log
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>commit b61790da4a981dede54956f20d356e3c03324c2c
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>commit 82833bd2ad45a125224f761e78ce7cd2dc3ff7d1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: Your Name &lt;you@example.com&gt;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date:   Mon Apr 1 17:56:11 2024 +0000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date:   Mon Apr 1 20:09:27 2024 +0000
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1990,7 +1999,9 @@ git commit --no-verify -m &quot;adding pyfiles&quot;
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading pre_commit-3.5.0-py2.py3-none-any.whl.metadata (1.3 kB)
-Collecting cfgv&gt;=2.0.0 (from pre-commit)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cfgv&gt;=2.0.0 (from pre-commit)
   Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
 </pre></div>
 </div>
@@ -2010,39 +2021,45 @@ Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.8.18/
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting distlib&lt;1,&gt;=0.3.7 (from virtualenv&gt;=20.10.0-&gt;pre-commit)
   Downloading distlib-0.3.8-py2.py3-none-any.whl.metadata (5.1 kB)
-Collecting filelock&lt;4,&gt;=3.12.2 (from virtualenv&gt;=20.10.0-&gt;pre-commit)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting filelock&lt;4,&gt;=3.12.2 (from virtualenv&gt;=20.10.0-&gt;pre-commit)
   Downloading filelock-3.13.3-py3-none-any.whl.metadata (2.8 kB)
 Requirement already satisfied: platformdirs&lt;5,&gt;=3.9.1 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from virtualenv&gt;=20.10.0-&gt;pre-commit) (4.2.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading pre_commit-3.5.0-py2.py3-none-any.whl (203 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/203.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">203.7/203.7 kB</span> <span class=" -Color -Color-Red">17.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">203.7/203.7 kB</span> <span class=" -Color -Color-Red">36.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hDownloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
 Downloading identify-2.5.35-py2.py3-none-any.whl (98 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/98.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">98.9/98.9 kB</span> <span class=" -Color -Color-Red">31.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">98.9/98.9 kB</span> <span class=" -Color -Color-Red">35.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
 Downloading virtualenv-20.25.1-py3-none-any.whl (3.8 MB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/3.8 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.8/3.8 MB</span> <span class=" -Color -Color-Red">117.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">3.8/3.8 MB</span> <span class=" -Color -Color-Red">137.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.8/3.8 MB</span> <span class=" -Color -Color-Red">97.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/468.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">468.9/468.9 kB</span> <span class=" -Color -Color-Red">83.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hDownloading filelock-3.13.3-py3-none-any.whl (11 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">468.9/468.9 kB</span> <span class=" -Color -Color-Red">80.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading filelock-3.13.3-py3-none-any.whl (11 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: distlib, nodeenv, identify, filelock, cfgv, virtualenv, pre-commit
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed cfgv-3.4.0 distlib-0.3.8 filelock-3.13.3 identify-2.5.35 nodeenv-1.8.0 pre-commit-3.5.0 virtualenv-20.25.1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
+
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
