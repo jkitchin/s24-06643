@@ -659,7 +659,7 @@ ER  -</pre><br><a href="data:text/plain;base64,VFkgIC0gSk9VUgpBVSAgLSBKb2huIFIuI
 <div class="tex2jax_ignore mathjax_ignore section" id="making-github-do-the-work-instead-of-your-computer">
 <h1>Making GitHUB do the work instead of your computer<a class="headerlink" href="#making-github-do-the-work-instead-of-your-computer" title="Permalink to this headline">¶</a></h1>
 <p>We have learned about pre-commit hooks, where you leverage git to run tests, do formatting, check styles, etc. These are ideal for your side of the work, that is, we check before submitting to GitHUB.</p>
-<p>There is also a way to do checks /after/ you submit to GitHUB. This is a specific feature of GitHUB, but you may find similar features in other services like bitbucket or gitlab.</p>
+<p>There is also a way to do checks <em>after</em> you submit to GitHUB. This is a specific feature of GitHUB, but you may find similar features in other services like bitbucket or gitlab.</p>
 <p>A workflow is a setup for an environment to run some commands in, and a set of commands to be run. Before we get into the details of those two things, we will talk about YAML (<a class="reference external" href="https://yaml.org/">https://yaml.org/</a>), which is recursively defined as “YAML ain’t markup language”. It is a data serialization language often used for configurations. It is specifically a data language, and is not meant to be used to write documents (in contrast to Markdown, for example).</p>
 <p>You can learn YAML here <a class="reference external" href="https://learnxinyminutes.com/docs/yaml/">https://learnxinyminutes.com/docs/yaml/</a>. We will learn by example today.</p>
 <p>Yaml is comprised of key:value pairs (like a dictionary) and lists.  These can be opened/closed by changing indentation levels.</p>
@@ -718,9 +718,8 @@ ER  -</pre><br><a href="data:text/plain;base64,VFkgIC0gSk9VUgpBVSAgLSBKb2huIFIuI
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>GitHUB Actions (<a class="reference external" href="https://docs.github.com/en/actions"></a>)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>To make a new workflow, you create a .yml or .yaml file in ~.github/workflows~.</p>
-<p>GitHUB actions are sophisticated, and cover a lot of ground:
-<a class="reference external" href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows">https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows</a>.</p>
+<p>To make a new workflow, you create a .yml or .yaml file in <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code>.</p>
+<p>GitHUB actions are sophisticated, and cover a lot of ground: <a class="reference external" href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows">https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows</a>.</p>
 <p>There are a few things every workflow must have in it. One is a name, and one is what triggers it to run. Here we specify those things. Put this in a file called <code class="docutils literal notranslate"><span class="pre">.github/workflows/my-workflow.yaml</span></code>. This will give your action a name, and it will get run when ever anything is pushed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -752,7 +751,7 @@ mkdir -p s24-06643-L08/.github/workflows
 </div>
 </div>
 </div>
-<p>Go ahead and commit this new file. Before you push it, remember to go to [])<a class="reference external" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>) to setup a personal access token. Make sure to select the repo and workflow items this time.</p>
+<p>Go ahead and commit this new file. Before you push it, remember to go to <a class="reference external" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> to setup a personal access token. Make sure to select the repo and workflow items this time.</p>
 <p>Also, go ahead and run this command in the repo in the terminal before you push:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git config credential.helper store
 </pre></div>
@@ -785,7 +784,7 @@ origin	git@github.com:jkitchin/s24-06643-L08.git (push)
 <p>There are a bunch of new things. You can see where the repo was forked from, and that it is one commit ahead of the repo it was forked from.</p>
 <p>Next, navigate to the Actions tab. Let’s see what happened.</p>
 <p>There isn’t much in the actions output. In fact, there is nothing at all! When the virtual machine that runs this spins up, it is bare and has almost nothing in it. It does not even have your repo in it.</p>
-<p>Let’s add a second job and learn a new trick about using “actions”. Here we checkout a copy of our repo, then we update apt so we can install tree. What is with the “sudo”? You need /root/ or /superuser/ privileges to install packages, and we get that with <code class="docutils literal notranslate"><span class="pre">sudo</span></code>. It is short for “superuser do”.</p>
+<p>Let’s add a second job and learn a new trick about using “actions”. Here we checkout a copy of our repo, then we update apt so we can install tree. What is with the “sudo”? You need <code class="docutils literal notranslate"><span class="pre">root</span></code> or <code class="docutils literal notranslate"><span class="pre">superuser</span></code> privileges to install packages, and we get that with <code class="docutils literal notranslate"><span class="pre">sudo</span></code>. It is short for “superuser do”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> s24-06643-L08/.github/workflows/my-workflow.yaml
@@ -1019,7 +1018,7 @@ All done! ✨ 🍰 ✨
 </div>
 <div class="section" id="create-a-status-badge">
 <h2>Create a status badge<a class="headerlink" href="#create-a-status-badge" title="Permalink to this headline">¶</a></h2>
-<p>In the actions view there is a place to create a status badge. This is some Markdown that GitHUB can render. Copy this to your <a class="reference external" href="http://Readme.md">Readme.md</a> file, then commit and push it.</p>
+<p>In the actions view there is a place to create a status badge. This is some Markdown that GitHUB can render. Copy this to your <a class="reference external" href="http://Readme.md">Readme.md</a> file, then commit and push it. This text is simply an svg image url that gets updated when the Actions are run.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
@@ -1271,7 +1270,7 @@ git push
 </div>
 </div>
 <p>Next, we set up a GitHUB <em>action</em>. This is a yaml file saved as <code class="docutils literal notranslate"><span class="pre">action.yml</span></code> in your repo root. This is a little different than the workflows above. This defines some inputs that will be used and passed to the Docker image.</p>
-<p>The syntax ~$~ is /like/ a python f-string, but in yaml instead. The value of “who-to-greet” will be used in the template string.</p>
+<p>The syntax <code class="docutils literal notranslate"><span class="pre">${{</span> <span class="pre">inputs.who-to-greet</span> <span class="pre">}}</span></code> is <code class="docutils literal notranslate"><span class="pre">like</span></code> a python f-string, but in yaml instead. The value of “who-to-greet” will be used in the template string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%writefile  s24-06643-L08/action.yml
